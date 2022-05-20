@@ -74,3 +74,23 @@ https://openweathermap.org/current
 * Code. Commit and Push as many times as you want, only the **LAST Pull Request** will be graded
 * Create a Pull Request from your new branch in your private repo and invite us as reviewer
 * Add https://github.com/oddle-hire-java as collaborator for your repo and add `oddle-hire-java` as reviewer to your PR
+
+## How to use
+* Connect database with\
+  username : root\
+  password : root\
+on localhost and run initialize.sql to create database and table.
+* Import, build and run this project with IntelliJ or any.
+* Visit http://localhost:8092/swagger-ui/index.html to consume this project API. 
+* Or you can do that with Postman\
+  http://localhost:8092/weather/today **Parameter String** city \
+  http://localhost:8092/weather/history \
+  http://localhost:8092/weather/update **Body Object weatherChangeRequest**  
+  http://localhost:8092/weather/delete
+
+
+#Explain API
+* getTodayWeather : input city name and get today's weather, then save it to database if db dont have it.
+* getHistoryWeather : Find all recorded weather in the database and and was paging.
+* updateHistoryWeather : update weather already exists in database.
+* deleteHistoryWeather : delete weather already exists in database.
